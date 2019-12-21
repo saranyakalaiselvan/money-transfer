@@ -36,6 +36,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter{
                 .and()
                 .csrf().disable()
                 .httpBasic();
+        http.headers().frameOptions().sameOrigin();
     }
     
     @Bean
